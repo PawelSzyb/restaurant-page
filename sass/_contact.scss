@@ -1,0 +1,76 @@
+@import "./variables";
+
+.contact {
+  .contact__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__logo img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .contact__header h3 {
+    margin-bottom: 0rem;
+  }
+  .contact__address {
+    padding: 0 1.5rem 2rem 1.5rem;
+    font-weight: bold;
+    color: lighten($mainColor, 20%);
+    text-align: center;
+    margin-top: 0;
+  }
+  .contact__action {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0;
+  }
+  .fa-crown {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1;
+    color: black;
+    padding: 5px 10px;
+  }
+  .contact__link-location {
+    width: 100%;
+    height: 61px;
+    display: block;
+  }
+  .btn {
+    border: 1px solid $mainColor;
+    background-color: #fff;
+    padding: 20px 30px;
+    font-family: $mainFont;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $mainColor;
+  }
+  .contact__header-reservation {
+    padding: 0rem 0 0.5rem;
+  }
+  .contact__link-reservation {
+    text-decoration: none;
+    color: lighten($mainColor, 20%);
+    text-align: center;
+    display: block;
+    padding-bottom: 3rem;
+    font-weight: bold;
+  }
+  .contact__email {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 996px) {
+  .contact {
+    margin-left: 200px;
+    position: relative;
+    z-index: 6;
+  }
+}

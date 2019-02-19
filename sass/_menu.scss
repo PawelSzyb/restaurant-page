@@ -1,0 +1,129 @@
+@import "_variables";
+
+.menu {
+  background-color: #fff;
+  .menu__nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 68px;
+    left: -100%;
+    z-index: 10;
+    align-items: center;
+    color: $mainColor;
+    background-color: #fff;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.3s linear;
+  }
+  .move-in {
+    left: 0;
+  }
+  .move-out {
+    left: -100%;
+  }
+  .menu__nav-item {
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: lighten($mainColor, 30%);
+    cursor: pointer;
+  }
+  .menu__nav-active {
+    color: #fff;
+    background-color: lighten($mainColor, 10%);
+    transition: 0.3s linear;
+  }
+  .menu__nav-item:hover {
+    color: #fff;
+    background-color: lighten($mainColor, 30%);
+    transition: 0.3s linear;
+  }
+  .menu__list {
+    color: $mainColor;
+    background-color: #fff;
+    margin: 0 0 5rem 1.5rem;
+    padding: 0;
+    list-style: none;
+    border-left: 2px dotted $secondaryColor;
+    transition: 0.3s 0.1s linear;
+    opacity: 0;
+    display: none;
+    transform: translateY(-30px);
+  }
+  .menu__list-one {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu__section {
+    margin: 0;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    transition: 0.3s linear;
+    opacity: 0;
+  }
+  .menu__item,
+  .menu__description {
+    margin: 0;
+  }
+  .menu__item {
+    padding: 2em 1.5rem;
+    font-weight: bold;
+    color: lighten($mainColor, 20%);
+    opacity: 0;
+    transition: 0.3s linear;
+    display: block;
+  }
+  .menu__description {
+    border-bottom: 1px dotted $mainColor;
+    margin: 0 1.5rem;
+    padding: 0 0 0.75rem;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+  .fade-in {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 776px) {
+  .menu .menu__list {
+    width: 80%;
+    margin: 0 auto 5rem;
+  }
+}
+
+@media (min-width: 996px) {
+  .menu {
+    overflow: hidden;
+    width: calc(100% - 200px);
+    margin-left: auto;
+    .menu__nav {
+      flex-direction: column;
+      width: 5%;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      justify-content: space-around;
+      z-index: 5;
+      transition: 0.8s linear;
+    }
+    .menu__nav-item {
+      padding: 0.9rem 1.3rem;
+      transform: rotate(-90deg);
+      width: 70px;
+    }
+    .move-in {
+      left: 200px;
+    }
+    .move-out {
+      left: 0px;
+    }
+  }
+}
