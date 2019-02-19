@@ -3,7 +3,7 @@ const slides = document.querySelectorAll("glide__slide");
 const glide = new Glide(".glide", {
   autoplay: 5000,
   gap: 0,
-  hoverpause: true
+  hoverpause: false
 });
 glide.mount();
 
