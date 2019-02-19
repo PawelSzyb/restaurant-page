@@ -43,7 +43,7 @@ function concatCss() {
 
 function javascript() {
   return gulp
-    .src("src/js/*.js")
+    .src("src/js/main.js")
     .pipe(concat("main.js"))
     .pipe(
       babel({
